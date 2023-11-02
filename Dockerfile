@@ -1,5 +1,5 @@
 # mengunduh base image node versi 14
-FROM node:14
+FROM node:14.21.3-alpine3.17
 # mengatur working directory menjadi /app
 WORKDIR /app
 # menyalin berkas dari current working directory host

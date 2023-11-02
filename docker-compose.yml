@@ -6,10 +6,10 @@ services:
   # mendefinisikan servis item-app
   item-app:
     # mendefinisikan base iamge untuk item app
-    image: node:14
+    image: node:14.21.3-alpine3.17
     # mendefinisikan port mapping untuk item app
     ports:
-      - 80:8080
+      - "80:8080"
     # mendefinisikan working directory untuk item app
     working_dir: /app
     # mendefinsikan volumes yang digunakan item app
@@ -29,7 +29,7 @@ services:
     image: mongo:3
     # mendefinisikan port mapping untuk item-db
     ports:
-      - 27017:27017
+      - "27017:27017"
     # mendefinisikan restart policy
     restart: always
     # mendefinisikan volumes yang digunakan oleh item-db
