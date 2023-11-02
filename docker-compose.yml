@@ -6,22 +6,15 @@ services:
   # mendefinisikan servis item-app
   item-app:
     # mendefinisikan base iamge untuk item app
-    image: node:14.21.3-alpine3.17
+    image: faishalshidqi/item-app:v1
     # mendefinisikan port mapping untuk item app
     ports:
       - "80:8080"
-    # mendefinisikan working directory untuk item app
-    working_dir: /app
-    # mendefinsikan volumes yang digunakan item app
-    volumes:
-      - ./:/app
     # memastikan item-app berjalan setelah item-db tuntas
     depends_on:
       - item-db
     # mendefinisikan restart policy
     restart: always
-    # mendefinisikan platform item-app
-    platform: "linux/amd64"
 
   # mendefinisikan servis item-db
   item-db:
@@ -35,8 +28,6 @@ services:
     # mendefinisikan volumes yang digunakan oleh item-db
     volumes:
       - app-db:/data/db
-    # mendefinisikan platform item-db
-    platform: "linux/amd64"
 
 # mendefinisikan volumes yang akan digunakan oleh item-db
 volumes:
