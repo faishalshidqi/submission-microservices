@@ -1,106 +1,156 @@
-> docker-software-delivery@1.0.0 start /app
-> node ./bin/www
-NODE_ENV: production
-> docker-software-delivery@1.0.0 start /app
-> node ./bin/www
-NODE_ENV: production
-/app/node_modules/mongodb/lib/mongo_client.js:421
-          throw err
-          ^
-AssertionError [ERR_ASSERTION]: null == Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 192.168.160.2:27017
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
-  name: 'MongoError'
-}]
-    at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
-    at Pool.emit (events.js:400:28)
-    at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
-    at Object.onceWrapper (events.js:520:26)
-    at Connection.emit...
-    at /app/app.js:24:10
-    at connectCallback (/app/node_modules/mongodb/lib/mongo_client.js:527:5)
-    at /app/node_modules/mongodb/lib/mongo_client.js:418:11
-    at processTicksAndRejections (internal/process/task_queues.js:77:11) {
-  generatedMessage: true,
-  code: 'ERR_ASSERTION',
-  actual: null,
-  expected: Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 192.168.160.2:27017
-      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
-    name: 'MongoError'
-  }]
-      at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
-      at Pool.emit (events.js:400:28)
-      at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
-      at Object.onceWrapper (events.js:520:26)
-      at Connection.emit (events.js:400:28)
-      at Socket.<anonymous> (/app/node_modules/mongodb-core/lib/connection/connection.js:189:49)
-      at Object.onceWrapper (events.js:520:26)
-      at Socket.emit (events.js:400:28)
-      at emitErrorNT (internal/streams/destroy.js:106:8)
-      at emitErrorCloseNT (internal/streams/destroy.js:74:3),
-  operator: '=='
-}
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! docker-software-delivery@1.0.0 start: `node ./bin/www`
-npm ERR! Exit status 1
-npm ERR!
-npm ERR! Failed at the docker-software-delivery@1.0.0 start script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /root/.npm/_logs/2023-11-02T06_48_33_760Z-debug.log
-/app/node_modules/mongodb/lib/mongo_client.js:421
-          throw err
-          ^
-AssertionError [ERR_ASSERTION]: null == Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 192.168.160.2:27017
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
-  name: 'MongoError'
-}]
-    at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
-    at Pool.emit (events.js:400:28)
-    at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
-    at Object.onceWrapper (events.js:520:26)
-    at Connection.emit...
-    at /app/app.js:24:10
-    at connectCallback (/app/node_modules/mongodb/lib/mongo_client.js:527:5)
-    at /app/node_modules/mongodb/lib/mongo_client.js:418:11
-    at processTicksAndRejections (internal/process/task_queues.js:77:11) {
-  generatedMessage: true,
-  code: 'ERR_ASSERTION',
-  actual: null,
-  expected: Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 192.168.160.2:27017
-      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
-    name: 'MongoError'
-  }]
-      at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
-      at Pool.emit (events.js:400:28)
-      at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
-      at Object.onceWrapper (events.js:520:26)
-      at Connection.emit (events.js:400:28)
-      at Socket.<anonymous> (/app/node_modules/mongodb-core/lib/connection/connection.js:189:49)
-      at Object.onceWrapper (events.js:520:26)
-      at Socket.emit (events.js:400:28)
-      at emitErrorNT (internal/streams/destroy.js:106:8)
-      at emitErrorCloseNT (internal/streams/destroy.js:74:3),
-  operator: '=='
-}
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! docker-software-delivery@1.0.0 start: `node ./bin/www`
-npm ERR! Exit status 1
-npm ERR!
-npm ERR! Failed at the docker-software-delivery@1.0.0 start script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /root/.npm/_logs/2023-11-02T06_48_34_878Z-debug.log
-> docker-software-delivery@1.0.0 start /app
-> node ./bin/www
-NODE_ENV: production
-Connected to database
-GET / 200 245.502 ms - 788
-GET /javascripts/dist/dist.min.js 200 4.085 ms - 186999
-GET /stylesheets/style.css 200 19.342 ms - 519
-GET /javascripts/dist/dist.min.js 200 1.385 ms - 186999
-GET /api 304 8.076 ms - -
-POST /api 201 76.643 ms - 50
-POST /api 201 8.789 ms - 51
-POST /api 201 7.088 ms - 53
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.196+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=85dbdeaf2cad
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.203+0000 I CONTROL  [initandlisten] db version v3.6.23
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.203+0000 I CONTROL  [initandlisten] git version: d352e6a4764659e0d0350ce77279de3c1f243e5c
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.203+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.203+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.204+0000 I CONTROL  [initandlisten] modules: none
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.204+0000 I CONTROL  [initandlisten] build environment:
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.204+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.204+0000 I CONTROL  [initandlisten]     distarch: x86_64
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.204+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.205+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.218+0000 I STORAGE  [initandlisten]
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.219+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.219+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+submission1-microservices-item-db-1   | 2023-11-02T07:21:21.222+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1451M,cache_overflow=(file_max=0M),session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.353+0000 I STORAGE  [initandlisten] WiredTiger message [1698909682:353337][1:0x40063c0b80], txn-recover: Set global recovery timestamp: 0
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.435+0000 I CONTROL  [initandlisten]
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.435+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.435+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.435+0000 I CONTROL  [initandlisten]
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.437+0000 I CONTROL  [initandlisten]
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.437+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.437+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.437+0000 I CONTROL  [initandlisten]
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.449+0000 I STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 11f78a4d-cfff-445a-b4bb-0af2339582c5
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.491+0000 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.6
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.541+0000 I STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: ca49ab7b-3965-4732-b371-a2a117a8b2d0
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.560+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.631+0000 I NETWORK  [initandlisten] listening via socket bound to 0.0.0.0
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.655+0000 I NETWORK  [initandlisten] listening via socket bound to /tmp/mongodb-27017.sock
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.658+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.708+0000 I STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with generated UUID: 29e11942-7a57-4227-a0cf-92658594062b
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.798+0000 I INDEX    [LogicalSessionCacheRefresh] build index on: config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 }
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.799+0000 I INDEX    [LogicalSessionCacheRefresh]  building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.842+0000 I INDEX    [LogicalSessionCacheRefresh] build index done.  scanned 0 total records. 0 secs
+submission1-microservices-item-db-1   | 2023-11-02T07:21:22.857+0000 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: createIndexes { createIndexes: "system.sessions", indexes: [ { key: { lastUse: 1 }, name: "lsidTTLIndex", expireAfterSeconds: 1800 } ], $db: "config" } numYields:0 reslen:98 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_msg 147ms
+submission1-microservices-item-db-1   | 2023-11-02T07:21:23.917+0000 I NETWORK  [listener] connection accepted from 192.168.176.3:54274 #1 (1 connection now open)
+submission1-microservices-item-db-1   | 2023-11-02T07:21:23.925+0000 I NETWORK  [conn1] received client metadata from 192.168.176.3:54274 conn1: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Linux", name: "linux", architecture: "arm64", version: "6.4.16-linuxkit" }, platform: "Node.js v14.21.3, LE, mongodb-core: 2.1.20" }
+submission1-microservices-item-db-1   | 2023-11-02T07:22:03.518+0000 I STORAGE  [conn1] createCollection: accumulator.documents with generated UUID: d94151ff-6a3c-42b7-a0ea-e248aade353d
+submission1-microservices-item-app-1  |
+submission1-microservices-item-app-1  | > docker-software-delivery@1.0.0 start /app
+submission1-microservices-item-app-1  | > node ./bin/www
+submission1-microservices-item-app-1  |
+submission1-microservices-item-app-1  | NODE_ENV: production
+submission1-microservices-item-app-1  | /app/node_modules/mongodb/lib/mongo_client.js:421
+submission1-microservices-item-app-1  |           throw err
+submission1-microservices-item-app-1  |           ^
+submission1-microservices-item-app-1  |
+submission1-microservices-item-app-1  | AssertionError [ERR_ASSERTION]: null == Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 192.168.176.2:27017
+submission1-microservices-item-app-1  |     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
+submission1-microservices-item-app-1  |   name: 'MongoError'
+submission1-microservices-item-app-1  | }]
+submission1-microservices-item-app-1  |     at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
+submission1-microservices-item-app-1  |     at Pool.emit (events.js:400:28)
+submission1-microservices-item-app-1  |     at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
+submission1-microservices-item-app-1  |     at Object.onceWrapper (events.js:520:26)
+submission1-microservices-item-app-1  |     at Connection.emit...
+submission1-microservices-item-app-1  |     at /app/app.js:24:10
+submission1-microservices-item-app-1  |     at connectCallback (/app/node_modules/mongodb/lib/mongo_client.js:527:5)
+submission1-microservices-item-app-1  |     at /app/node_modules/mongodb/lib/mongo_client.js:418:11
+submission1-microservices-item-app-1  |     at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+submission1-microservices-item-app-1  |   generatedMessage: true,
+submission1-microservices-item-app-1  |   code: 'ERR_ASSERTION',
+submission1-microservices-item-app-1  |   actual: null,
+submission1-microservices-item-app-1  |   expected: Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 192.168.176.2:27017
+submission1-microservices-item-app-1  |       at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
+submission1-microservices-item-app-1  |     name: 'MongoError'
+submission1-microservices-item-app-1  |   }]
+submission1-microservices-item-app-1  |       at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
+submission1-microservices-item-app-1  |       at Pool.emit (events.js:400:28)
+submission1-microservices-item-app-1  |       at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
+submission1-microservices-item-app-1  |       at Object.onceWrapper (events.js:520:26)
+submission1-microservices-item-app-1  |       at Connection.emit (events.js:400:28)
+submission1-microservices-item-app-1  |       at Socket.<anonymous> (/app/node_modules/mongodb-core/lib/connection/connection.js:189:49)
+submission1-microservices-item-app-1  |       at Object.onceWrapper (events.js:520:26)
+submission1-microservices-item-app-1  |       at Socket.emit (events.js:400:28)
+submission1-microservices-item-app-1  |       at emitErrorNT (internal/streams/destroy.js:106:8)
+submission1-microservices-item-app-1  |       at emitErrorCloseNT (internal/streams/destroy.js:74:3),
+submission1-microservices-item-app-1  |   operator: '=='
+submission1-microservices-item-app-1  | }
+submission1-microservices-item-app-1  | npm ERR! code ELIFECYCLE
+submission1-microservices-item-app-1  | npm ERR! errno 1
+submission1-microservices-item-app-1  | npm ERR! docker-software-delivery@1.0.0 start: `node ./bin/www`
+submission1-microservices-item-app-1  | npm ERR! Exit status 1
+submission1-microservices-item-app-1  | npm ERR!
+submission1-microservices-item-app-1  | npm ERR! Failed at the docker-software-delivery@1.0.0 start script.
+submission1-microservices-item-app-1  | npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+submission1-microservices-item-app-1  |
+submission1-microservices-item-app-1  | npm ERR! A complete log of this run can be found in:
+submission1-microservices-item-app-1  | npm ERR!     /root/.npm/_logs/2023-11-02T07_21_21_567Z-debug.log
+submission1-microservices-item-app-1  |
+submission1-microservices-item-app-1  | > docker-software-delivery@1.0.0 start /app
+submission1-microservices-item-app-1  | > node ./bin/www
+submission1-microservices-item-app-1  |
+submission1-microservices-item-app-1  | NODE_ENV: production
+submission1-microservices-item-app-1  | /app/node_modules/mongodb/lib/mongo_client.js:421
+submission1-microservices-item-app-1  |           throw err
+submission1-microservices-item-app-1  |           ^
+submission1-microservices-item-app-1  |
+submission1-microservices-item-app-1  | AssertionError [ERR_ASSERTION]: null == Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 192.168.176.2:27017
+submission1-microservices-item-app-1  |     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
+submission1-microservices-item-app-1  |   name: 'MongoError'
+submission1-microservices-item-app-1  | }]
+submission1-microservices-item-app-1  |     at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
+submission1-microservices-item-app-1  |     at Pool.emit (events.js:400:28)
+submission1-microservices-item-app-1  |     at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
+submission1-microservices-item-app-1  |     at Object.onceWrapper (events.js:520:26)
+submission1-microservices-item-app-1  |     at Connection.emit...
+submission1-microservices-item-app-1  |     at /app/app.js:24:10
+submission1-microservices-item-app-1  |     at connectCallback (/app/node_modules/mongodb/lib/mongo_client.js:527:5)
+submission1-microservices-item-app-1  |     at /app/node_modules/mongodb/lib/mongo_client.js:418:11
+submission1-microservices-item-app-1  |     at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+submission1-microservices-item-app-1  |   generatedMessage: true,
+submission1-microservices-item-app-1  |   code: 'ERR_ASSERTION',
+submission1-microservices-item-app-1  |   actual: null,
+submission1-microservices-item-app-1  |   expected: Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 192.168.176.2:27017
+submission1-microservices-item-app-1  |       at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
+submission1-microservices-item-app-1  |     name: 'MongoError'
+submission1-microservices-item-app-1  |   }]
+submission1-microservices-item-app-1  |       at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
+submission1-microservices-item-app-1  |       at Pool.emit (events.js:400:28)
+submission1-microservices-item-app-1  |       at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
+submission1-microservices-item-app-1  |       at Object.onceWrapper (events.js:520:26)
+submission1-microservices-item-app-1  |       at Connection.emit (events.js:400:28)
+submission1-microservices-item-app-1  |       at Socket.<anonymous> (/app/node_modules/mongodb-core/lib/connection/connection.js:189:49)
+submission1-microservices-item-app-1  |       at Object.onceWrapper (events.js:520:26)
+submission1-microservices-item-app-1  |       at Socket.emit (events.js:400:28)
+submission1-microservices-item-app-1  |       at emitErrorNT (internal/streams/destroy.js:106:8)
+submission1-microservices-item-app-1  |       at emitErrorCloseNT (internal/streams/destroy.js:74:3),
+submission1-microservices-item-app-1  |   operator: '=='
+submission1-microservices-item-app-1  | }
+submission1-microservices-item-app-1  | npm ERR! code ELIFECYCLE
+submission1-microservices-item-app-1  | npm ERR! errno 1
+submission1-microservices-item-app-1  | npm ERR! docker-software-delivery@1.0.0 start: `node ./bin/www`
+submission1-microservices-item-app-1  | npm ERR! Exit status 1
+submission1-microservices-item-app-1  | npm ERR!
+submission1-microservices-item-app-1  | npm ERR! Failed at the docker-software-delivery@1.0.0 start script.
+submission1-microservices-item-app-1  | npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+submission1-microservices-item-app-1  |
+submission1-microservices-item-app-1  | npm ERR! A complete log of this run can be found in:
+submission1-microservices-item-app-1  | npm ERR!     /root/.npm/_logs/2023-11-02T07_21_22_419Z-debug.log
+submission1-microservices-item-app-1  |
+submission1-microservices-item-app-1  | > docker-software-delivery@1.0.0 start /app
+submission1-microservices-item-app-1  | > node ./bin/www
+submission1-microservices-item-app-1  |
+submission1-microservices-item-app-1  | NODE_ENV: production
+submission1-microservices-item-app-1  | Connected to database
+submission1-microservices-item-app-1  | GET / 200 224.814 ms - 788
+submission1-microservices-item-app-1  | GET /javascripts/dist/dist.min.js 304 2.896 ms - -
+submission1-microservices-item-app-1  | GET /javascripts/dist/dist.min.js 304 0.700 ms - -
+submission1-microservices-item-app-1  | GET /stylesheets/style.css 200 26.415 ms - 519
+submission1-microservices-item-app-1  | GET /api 200 9.499 ms - 2
+submission1-microservices-item-app-1  | POST /api 201 56.261 ms - 50
+submission1-microservices-item-app-1  | POST /api 201 5.266 ms - 51
+submission1-microservices-item-app-1  | POST /api 201 6.458 ms - 53
+submission1-microservices-item-app-1  | POST /api 201 7.015 ms - 57
