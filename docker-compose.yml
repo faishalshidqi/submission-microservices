@@ -20,9 +20,6 @@ services:
   item-db:
     # mendefinisikan base image untuk item-db
     image: mongo:3
-    # mendefinisikan port mapping untuk item-db
-    ports:
-      - "27017:27017"
     # mendefinisikan restart policy
     restart: always
     # mendefinisikan volumes yang digunakan oleh item-db
