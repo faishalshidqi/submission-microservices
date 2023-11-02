@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  item-app:
+    image: node:14
+    ports:
+      - 80:8080
+    working_dir: /app
+    volumes:
+      - ./:/app
+    depends_on:
+      - item-db
+    restart: always
+    platform: "linux/amd64"
+
+  item-db:
+    image: mongo:3
+    ports:
+      - 27017:27017
+    restart: always
+    volumes:
+      - app-db:/data/db
+    platform: "linux/amd64"
+
+volumes:
+  app-db:
