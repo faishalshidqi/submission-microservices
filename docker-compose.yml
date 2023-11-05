@@ -32,7 +32,7 @@ services:
   shipping-service:
     image: faishalshidqi/shipping-service:latest
     build:
-      context: ./
+      context: ../shipping-service-submission-microservices
       target: dev
     volumes:
       - .:/src
