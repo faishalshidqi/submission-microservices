@@ -4,7 +4,7 @@ COPY package*.json ./
 
 FROM base as production
 ENV NODE_ENV=production
-RUN npm ci
+RUN npm install
 COPY ./*.js ./
 EXPOSE 3000
 CMD ["node", "index.js"]
